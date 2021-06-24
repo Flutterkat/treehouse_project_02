@@ -22,6 +22,11 @@ a {
 }
 a:hover {
     color: blue;
+    text-shadow: 0px 0px 10px blue;
+    text-decoration:underline;
+}
+body {
+    background-color: lightblue;
 }
 /* ----header---- */
 
@@ -54,8 +59,32 @@ a:hover {
 .portfolio-block {
     margin-bottom: 3em;
 }
-#portfolio p, h3 {
-    padding-bottom: 5px;
+#portfolio p {
+    padding-bottom: 10px;
+}
+.portfolio-h3 {
+    margin-top: 25px;
+}
+/* ---- Skills ---- */
+#skills {
+    Border-top: 1px solid black;
+    padding: 25px;
+    margin: 25px;
+}
+#skills h3 {
+    margin-top: 25px;
+}
+.skill-wrap {
+    margin: 25px auto;
+    max-width: fit-content;
+    padding: 0;
+}
+.skill-item {
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px 5px;
+    width: 200px;
+    background-color: green;
 }
 
 /* ----footer---- */
@@ -130,12 +159,14 @@ a:hover {
         flex-wrap: wrap;
     }
     .pb1, .pb2, .pb3, .pb4, .pb5, .pb6 {
-        margin: auto;
+        margin: 0 auto;
         padding: 10px;
         flex-basis: 50%;
-        height: 370px;
     }
 
+    .skill-item {
+        display: inline-block;
+    }
     .footer {
         margin: 25px 40px 0 40px;
         padding: 25px;
@@ -164,7 +195,6 @@ a:hover {
     }
     .fnav {
         display: block;
-        justify-content: flex-end;
     }
     .footer-links {
         display: inline;
@@ -177,7 +207,7 @@ a:hover {
 
 
 /*----min-width: 1024---- */
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 1024px) {
     .nav-links {
         flex-direction: row;
     }
@@ -185,9 +215,6 @@ a:hover {
         margin: 0;
     }
     .pb1, .pb2, .pb3, .pb4, .pb5, .pb6 {
-        margin: auto;
-        padding: 10px;
         flex-basis: 33%;
-        height: 370px;
     }
 }
